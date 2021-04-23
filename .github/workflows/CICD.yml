@@ -36,7 +36,7 @@ jobs:
           go test -v
           go test -v | go2xunit >report.xml
    
-      - if: ${{failure}}
+      - if: ${{failure()}}
         name: Create Issues
         uses: nashimaniac/create-issue-action@v1.1
         with:
